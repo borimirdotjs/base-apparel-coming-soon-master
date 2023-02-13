@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.wrapper{
+    background: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+#logo {
+   padding: 1.5rem;
+   transform: scale(0.7);
+   align-self: start;
+   
+}
+
+#heroPic{
+    width: 100%;
+}
+
+#heroPicDesktop {
+    display:none;
+}
+
+.title {
+    text-align: center;
+    margin: 3rem 0rem 1rem 0rem; 
+}
+
+#weare{
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: 0.4rem;
+    color : hsl(0, 36%, 70%)
+}
+
+#commingsoon{
+    font-weight: 600;
+    letter-spacing: 0.4rem;
+    font-size: 2.2rem;
+    color : hsl(0, 6%, 24%);
+}
+
+p {
+    padding: 0rem 1.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+    color:hsl(0, 36%, 70%);
+    line-height: 1.6rem;
+}
+
+form {
+    margin: 3rem 0rem;
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius:30px;
+    width: 85%;
+    position: relative;
+
+}
+
+input {
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    background: none;
+    color: hsl(0, 36%, 70%);
+}
+input:focus{
+    outline: none;
+}
+
+
+::placeholder {
+    color:hsl(0, 36%, 70%)
+}
+
+#arrow {
+    height: auto;
+    width: 5.5rem;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+    position: relative;
+}
+
+#errpic {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    bottom: 0;
+    display:none;
+}
+
+.error-msg-class {
+    color:hsl(0, 93%, 68%);
+    font-size: medium;
+    position: absolute;
+    bottom: 1.5rem;
+    align-self: center;
+    left:1rem;
+    display: none;
+}
+
+@keyframes buttonmovement {
+    to{
+        transform: translateX(40px) scale(1.2);
+    }
+}
+
+@keyframes buttonmovementbackwards {
+    to{
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+@media screen and (min-width: 930px){
+    #heroPic{
+        display:none;
+    }
+    #heroPicDesktop {
+        display:block;
+        object-fit: cover;
+        }
+    .desktop{
+        display:flex;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+   }
+   
+   body {
+    background: url(./images/bg-pattern-desktop.svg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+   .wrapper{
+    padding: 4rem 0rem 4rem 4rem;
+    justify-content: space-between;
+    align-items: start;
+    min-height: 100vh;
+    background-image: none;
+   }
+
+   .error-msg-class {
+    color:hsl(0, 93%, 68%);
+    font-size: medium;
+    position: absolute;
+    bottom: 5rem;
+    left:5rem;
+    display: none;
+}
+    .error {
+        border: 3px solid hsl(0, 93%, 68%);
+    }
+   
+   .title {
+    text-align: start;
+    padding-right: 4rem;
+   }
+
+   p {
+    padding: 0;
+    text-align: start;
+    padding-right: 4rem;
+    font-size: 1.2rem;
+   }
+
+   #logo {
+    padding: 0;
+    transform: scale(1);
+    align-self: start;
+    
+ }
+    #weare{
+        font-size: 4rem;
+    }
+    #commingsoon{
+        font-size: 4rem;
+        color : hsl(0, 6%, 24%);
+
+    }
+
+    form {
+       
+    }
+}
+
